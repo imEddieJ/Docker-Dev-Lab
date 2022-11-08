@@ -1,0 +1,21 @@
+services:
+  ubuntu:
+    container_name: ubuntu.container
+    hostname: ubuntu.host
+    image: ubuntu:latest
+    restart: unless-stopped
+  fedora:
+    container_name: fedora.container
+    hostname: fedora.host
+    image: fedora:latest
+    restart: unless-stopped
+  debian:
+    container_name: debian.container
+    hostname: debian.host
+    image: debian:latest
+    restart: unless-stopped
+  alpine:
+    container_name: alpine.container
+    hostname: alpine.host
+    image: alpine:latest
+    restart: unless-stopped
