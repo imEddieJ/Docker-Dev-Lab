@@ -1,21 +1,41 @@
 services:
   ubuntu:
-    container_name: ubuntu.container
-    hostname: ubuntu.host
+    container_name: ubuntu
+    hostname: ubuntu.guest
     image: ubuntu:latest
+    networks:
+      - dev_net
+        - ipv4_address: 192.168.1.2
+    stdin_open: true    # docker run -i
+    tty: true           # docker run -t
     restart: unless-stopped
   fedora:
-    container_name: fedora.container
-    hostname: fedora.host
+    container_name: fedora
+    hostname: fedora.guest
     image: fedora:latest
+    networks:
+      - dev_net
+        - ipv4_address: 102.168.1.3
+    stdin_open: true    # docker run -i
+    tty: true           # docker run -t
     restart: unless-stopped
   debian:
-    container_name: debian.container
-    hostname: debian.host
+    container_name: debian
+    hostname: debian.guest
     image: debian:latest
+    networks:
+      - dev_net
+        - ipv4_address: 102.168.1.4
+    stdin_open: true    # docker run -i
+    tty: true           # docker run -t
     restart: unless-stopped
   alpine:
-    container_name: alpine.container
-    hostname: alpine.host
+    container_name: alpine
+    hostname: alpine.guest
     image: alpine:latest
+    networks:
+      - dev_net
+        - ipv4_address: 102.168.1.5
+    stdin_open: true    # docker run -i
+    tty: true           # docker run -t
     restart: unless-stopped
