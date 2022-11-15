@@ -4,7 +4,6 @@ services:
     hostname: ubuntu.guest
     image: ubuntu:latest
     networks:
-      default:
       dev_net:
         ipv4_address: "10.0.0.2"
     stdin_open: true    # docker run -i
